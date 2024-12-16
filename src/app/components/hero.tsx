@@ -1,29 +1,30 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <section className="text-gray-600 body-font bg-[#043873]">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8 py-12 lg:py-24">
+        <div className="container mx-auto flex px-5 py-12 md:py-24 flex-col md:flex-row items-center">
           {/* Text Section */}
-          <div className="flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left mb-10 md:mb-0">
-            <h1 className="text-3xl sm:text-4xl font-bold text-[#FFFFFF] leading-tight mb-4">
-              Get More Done with <br className="hidden lg:inline-block" /> whitepace
+          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center mb-16 md:mb-0">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-[#FFFFFF]">
+              Get More Done with
+              <br className="hidden lg:inline-block font-bold" />
+              whitepace
             </h1>
-            <p className="text-[#FFFFFF] leading-relaxed text-sm sm:text-base mb-8">
-              Project management software that enables your teams to collaborate, plan, <br />
-              analyze and manage everyday tasks
+            <p className="mb-8 leading-relaxed text-[#FFFFFF] text-sm md:text-base">
+              Project management software that enables your teams to collaborate, plan,<br /> analyze and manage everyday tasks
             </p>
-            <button className="inline-flex w-[219px] h-[63px] items-center justify-center bg-[#4F9CF9] text-[#FFFFFF] border-0 rounded hover:bg-blue-700">
-              Try Whitepace free
+            <button className="inline-flex w-[219px] h-[63px] bg-[#4F9CF9] text-[#FFFFFF] items-center border-0 py-2 px-4 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+              <span className='ml-[20px]'>Try Whitepace free</span>
               <svg
                 fill="none"
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-4 h-4 ml-2"
+                className="w-4 h-4 ml-1"
                 viewBox="0 0 24 24"
               >
                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -32,19 +33,19 @@ const Hero = () => {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 w-full flex justify-center">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full flex justify-center">
             <Image
-              src="/Image-container.png"
+              className="object-cover object-center rounded w-full h-auto"
               alt="hero"
               width={824}
               height={529}
-              className="w-full h-auto"
+              src="/Image-container.png"
             />
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
